@@ -59,7 +59,8 @@ WHERE country = 'Albania';
 
 SELECT *
 FROM `country-data`
-WHERE country != 'Algeria';
+WHERE country != 'Algeria' AND country != 'Albania' AND country != 'Angela' AND country != 'Australia' AND country != 'Austria'
+ AND country != 'Armenia' AND country != 'Bahamas' AND country != 'Belgium';
 
 # Count the Dataset
 
