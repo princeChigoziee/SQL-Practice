@@ -14,27 +14,27 @@ The following SQL queries were developed to answer specific questions:
 
 1. **Select all the coloumns in the country data tutorial**
 
-```
+```sql
     SELECT * 
     FROM `country-data`;
 ```
 2. **Print out the content of the country, child_mort, and gdpp, only output 5 rows**:
 
-```
+```sql
     SELECT country, child_mort, gdpp
     FROM `country-data`
     LIMIT 5;
 ```
 3. **Select all the columns of the dataset where infiation is less than 10**:
 
-```
+```sql
     SELECT *
     FROM `country-data`
     WHERE inflation < 10;
 ```
 4. **Output the first 8 countries whose income is between 10000 and 25000**:
 
- ```
+ ```sql
      SELECT country,income
      FROM `country-data`
      WHERE income BETWEEN 10000 AND 25000
@@ -42,7 +42,7 @@ The following SQL queries were developed to answer specific questions:
  ```
  5. **Show 5 countries with the lowest child_mort**
 
-```
+```sql
     SELECT country, child_mort
     FROM `country-data`
     ORDER BY child_mort
@@ -50,42 +50,42 @@ The following SQL queries were developed to answer specific questions:
 ```
 6. **Select countries whose life-expentancy is greater than 70 or equal to 70**:
 
-```
+```sql
     SELECT *
     FROM `country-data`
     WHERE life_expec >= 70;
 ```
 7. **Select countries whose inflation is less than or equal to 25**
 
-```
+```sql
     SELECT country, inflation
     FROM `country-data`
     WHERE inflation <= 25;
 ```
 8. **Select countries whose inflation is greater than or equal to 8 but less than 20**:
 
-```
+```sql
     SELECT country, inflation
     FROM `country-data`
     WHERE inflation >= 8 AND inflation < 20;
 ```
 9. **Print out all the data print for Albania**:
 
-```
+```sql
     SELECT *
     FROM `country-data`
     WHERE country = 'Albania';
 ```
 10. **Print out all the data points excluding for Algeria, Albania, Angela, Australia, Austria, Armenia, Bahamas and Belgium**:
 
-```
+```sql
     SELECT *
     FROM `country-data`
     WHERE country != 'Algeria';
 ```
 11. **Determine the total number of records in the dataset**:
 
-```
+```sql
     SELECT COUNT(*)
     FROM `country-data`;
 ```
