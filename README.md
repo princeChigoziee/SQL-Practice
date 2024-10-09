@@ -89,3 +89,53 @@ The following SQL queries were developed to answer specific questions:
     SELECT COUNT(*)
     FROM `country-data`;
 ```
+12. **Select 6 countries, exports, health, income that end with the letter y**:
+
+```sql
+    SELECT country, exports, health, income
+    FROM `country-data`
+    WHERE country LIKE '%y'
+    LIMIT 6;
+```
+
+13. **Select the data points for the following countries only, Austria, Armenia, Bahamas, Belgium**:
+
+```sql
+    SELECT *
+    FROM `country-data`
+    WHERE country IN ('Austria','Armenia','Bahamas','Belgium');
+```
+14. **Select only countries that have an inflation in the range of 5 to 15**:
+
+```sql
+    SELECT country, inflation
+    FROM `country-data`
+    WHERE inflation BETWEEN 5 AND 15;
+```
+15. **Select all the data points for the following countries only Austria and Armenia**:
+
+```sql
+    SELECT *
+    FROM `country-data`
+    WHERE country IN ('Austria','Armenia');
+``` 
+16. **Select countries whose child_mort is less than 10 and inflation is above 15**:
+
+```sql
+    SELECT country, child_mort, inflation
+    FROM `country-data`
+    WHERE child_mort < 10 AND inflation > 15;
+```
+17. **Print out all the data point excluding for Angola (CTE) Australia, Austria, Bahamas, Belgium**:
+
+```sql
+    With data_CTE as (
+    SELECT *
+    FROM `country-data`
+    WHERE country IN ('Austria','Angola','Bahamas','Belgium', 'Australia')
+    )
+    
+    SELECT *
+    FROM data_CTE
+    WHERE country NOT IN ('Angola');
+```
